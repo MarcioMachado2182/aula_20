@@ -12,8 +12,10 @@ label.pack(pady=10)
 
 # Função para ser chamada quando o botão for clicado
 def on_button_click():
+    clique = 0
     print("Botão clicado!")
-    label.config(text="Você clicou no botão!")  # Atualiza o texto do label
+    clique += 1 
+    label.config(text=f"Você clicou {clique} vezesno botão!")  # Atualiza o texto do label
 
 # Adiciona um botão
 button = tk.Button(root, text="Clique em mim", command=on_button_click)
@@ -26,6 +28,7 @@ entry.pack(pady=10)
 # Adiciona um botão para pegar o texto da entrada
 def on_get_text():
     user_input = entry.get()
+   
     print(f"Entrada do usuário: {user_input}")
     label.config(text=f"Você digitou: {user_input}")
 

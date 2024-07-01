@@ -7,13 +7,13 @@ root = tk.Tk()
 root.geometry("70x21")
 
 # Adiciona um label
-message = tk.Label(root, text="Label 2 ", background="green", anchor="w")
+message = tk.Label(root, text="Label 2 ", background="green", anchor="w", fg="white")
 message.pack(side="left")
 
-message = tk.Label(root, text="Label 3 ", background="blue", anchor="w")
+message = tk.Label(root, text="Label 3 ", background="blue", anchor="w", fg="white")
 message.pack(side="left")
 
-message = tk.Label(root, text="Label 1 ", background="red", anchor="w")
+message = tk.Label(root, text="Label 1 ", background="red", anchor="w", fg="white")
 message.pack(side="left")
 
 
