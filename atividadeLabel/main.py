@@ -24,7 +24,6 @@ message = tk.Label(root, text="3", anchor="w", background="silver" )
 message.pack(side="top", fill="both")
 
 
-
 # Adicionar a terceira mensagem
 casa = Casa(n_comodos="10",n_portas="3",n_janelas="4",cor_externa="Azul",numero="2182",endereco="Acesso, H(Sq 3 - 2ª Unidade Vicinal - Restinga)",proprietario="Márcio")
 message = tk.Label(root, text="numero de janelas: ", background="yellow", anchor="w")
@@ -63,7 +62,6 @@ message = tk.Label(root, text="proprietario: ", background="yellow", anchor="w")
 message.pack(side="top", fill="both")
 message = tk.Label(root, text="Marcio", anchor="w", background="silver" )
 message.pack(side="top", fill="both")
-
 
 
 root.mainloop()
