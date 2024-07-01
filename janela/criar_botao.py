@@ -14,7 +14,8 @@ label.pack(pady=10)
 def botao_conta_click():
    
     print("Botão clicado!")
-    clique += 1 
+    global clique 
+    clique =+ 1 
     label.config(text=f"Você clicou {clique} vezesno botão!")  
     clique += 1
 
@@ -28,7 +29,7 @@ def botao_limpa_click():
 button = tk.Button(root, text="Clique em mim", command=botao_conta_click)
 button.pack(pady=10)
 
-buttton = tk.Button(roottext="ZEROU", command=botao_limpa_click)
+buttton = tk.Button(root, text="ZEROU", command=botao_limpa_click)
 button.pack(pady=10)
 
 
