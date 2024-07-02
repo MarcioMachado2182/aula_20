@@ -20,10 +20,16 @@ label1.pack(side="right")
 
 #criando area de entrada
 
+entry = tk.Entry(root)
+entry.pack(pady=10)
+
+# Adiciona um botão para pegar o texto da entrada
 def on_get_text():
-    user_input = ""
+    user_input = entry.get()
     print(f"Entrada do usuário: {user_input}")
     label2 = tk.Label(frame2, text=f"Você digitou: {user_input}")
+    label2.pack(side="right")
+
     label2.pack(side="right")
 
 
