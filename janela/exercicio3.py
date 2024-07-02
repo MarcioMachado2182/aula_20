@@ -6,26 +6,34 @@ root = tk.Tk()
 root.title("EXERCICIO 3")
 root.geometry("400x300")
 
-# Adiciona um label
-frame = tk.Frame(root, bg="blue")
-frame.pack( fill="both")
-label = tk.Label(frame, text="Metalica", bg="purple", fg="yellow")
-label.pack(side="right")
+# Adiciona Frames
+frame1 = tk.Frame(root, bg="blue")
+frame1.pack( fill="both")
+frame2 = tk.Frame(root, bg="silver")
+frame2.pack( fill="both")
+frame3 = tk.Frame(root, bg="pink")
+frame3.pack(fill="both")
 
-entry = tk.Entry(root)
-entry.pack(pady=10)
+#Criando a Label
+label1 = tk.Label(frame1, text="Metalica", bg="purple", fg="yellow")
+label1.pack(side="right")
 
-# Adiciona um botão para pegar o texto da entrada
+#criando area de entrada
+
 def on_get_text():
-
-    
-    user_input = entry.get()
+    user_input = ""
     print(f"Entrada do usuário: {user_input}")
-    label.config(text=f"Você digitou: {user_input}", anchor="w")
-    label.pack(side="right")
+    label2 = tk.Label(frame2, text=f"Você digitou: {user_input}")
+    label2.pack(side="right")
 
-get_text_button = tk.Button(root, text="Obter texto", command=on_get_text)
-get_text_button.pack(pady=10)
+
+
+
+#Criando o Botao
+button = tk.Button (frame3, text="Digite alguma Coisa", bg="silver", fg="yellow", anchor="w")
+button.pack(pady=10, side="right")
+
+
 
 
 
