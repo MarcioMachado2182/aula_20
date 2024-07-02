@@ -7,29 +7,28 @@ root.title("Contador de Cliques")
 root.geometry("400x300")
 clique = 0
 # Adiciona um label
-label = tk.Label(root, text="Vamos contar os cliques?")
+label = tk.Label(root, text="Vamos contar os cliques?", bg="green", fg="white")
 label.pack(pady=10)
 
-# Função para ser chamada quando o botão for clicado
-def botao_conta_click():
-   
-    print("Botão clicado!")
+# Função para contar os cliques
+def botao_conta_click():   
     global clique 
-    clique =+ 1 
-    label.config(text=f"Você clicou {clique} vezesno botão!")  
-    clique += 1
-
-
+    clique = clique +  1 
+    label.config(text=f"Você clicou {clique} vezez no botão!")  
+   
+#Função para limpar os cliques
 def botao_limpa_click():
+    global clique
     clique  = 0
-    label.config(text=f"Você limpou agora voce clicou {clique} vezesno botão!")    
-
-#Adiciona um botão
+    label.config(text=f"Você limpou agora voce tem {clique} cliques!")    
     
-button = tk.Button(root, text="Clique em mim", command=botao_conta_click)
+
+#Adiciona um botão contador de cliques    
+button = tk.Button(root, text="Clique para iniciar a contagem", command=botao_conta_click, bg="silver", fg="yellow")
 button.pack(pady=10)
 
-buttton = tk.Button(root, text="ZEROU", command=botao_limpa_click)
+#Adiciona um botão que zera o nº de cliques
+button = tk.Button(root, text="Clique Para Zerar", command=botao_limpa_click, bg="purple", fg="white" )
 button.pack(pady=10)
 
 
